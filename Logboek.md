@@ -1,6 +1,8 @@
 # Logboek
 
 ## Week 1:
-*Les van 9-13.
-*Vormen team.
-*aanmaken van Github repository & logboek.
+* 4u les.
+    * Vormen team.
+    * Aanmaken van Github repository & logboek.
+    * Installatie XAMPP.
+    * Oefenen met phpMyAdmin
