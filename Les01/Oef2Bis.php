@@ -20,10 +20,6 @@ $new_pr_name = $_POST["Productnaam"];
 $new_pr_Prijs = $_POST["Prijs"];
 $new_pr_ct_id = $_POST["Categorie"];
 
-if (!$conn) {
-    die("Geen databank verbinding");
-}
-
 $sql = "INSERT INTO producten (pr_naam, pr_prijs, pr_ct_id) VALUES ('$new_pr_name', $new_pr_Prijs, $new_pr_ct_id)";
 
 if (!mysqli_query($conn, $sql)) {
