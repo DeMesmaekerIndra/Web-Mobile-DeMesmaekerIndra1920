@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
 <?php
 echo "<h1>Hallo Odisee!</h1>";
 ?>
@@ -20,13 +30,11 @@ echo "<h1>Hallo Odisee!</h1>";
     }
 
 </style>
-<?php
-
-// een verbinding leggen met de databank
+<?php // een verbinding leggen met de databank
 $servername = "localhost";
-$username = "root";// dangerous
-$password = "";// dangerous
-$dbname = "test";// standaard test databank
+$username = "root"; // dangerous
+$password = ""; // dangerous
+$dbname = "test"; // standaard test databank
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname) or die(mysqli_connect_error());
@@ -40,16 +48,16 @@ $conn = mysqli_connect($servername, $username, $password, $dbname) or die(mysqli
 // Test dit door de in je Xampp Control panel MySQL uit te schakelen
 // en de pagina opnieuw te laden.
 
-
-function fetchData($sql, $conn){
+function fetchData($sql, $conn)
+{
     // $sql is een string met een SQL query
     // $conn is het object met de verbinding naar de databank
     $return = array();
     if (!$conn) {
         die("Geen databank verbinding");
     } else {
-        $result = $conn -> query($sql); // voer de query uit en stop het resultaat in $result
-        while ($row = $result -> fetch_assoc()) {
+        $result = $conn->query($sql); // voer de query uit en stop het resultaat in $result
+        while ($row = $result->fetch_assoc()) {
             // loop door alle resultaatrijen en plaats die in de array $return
             // die als returnwaarde wordt teruggegeven.
             // Iedere nieuwe $row wordt op de laatste positie + 1 gestopt
@@ -58,13 +66,13 @@ function fetchData($sql, $conn){
     }
     return $return; // return de array
 }
-$resultaat = fetchData("SELECT * from testtabel" , $conn);
+$resultaat = fetchData("SELECT * from testtabel", $conn);
 
-for($i = 0 ; $i < count($resultaat) ; $i++){
+for ($i = 0; $i < count($resultaat); $i++) {
     // loop door ieder item van de $resultaat array, haal de gewenste info er uit en toon
     // deze in de vorm van html. In dit geval ingedeeld met spans.
-    echo "<span class='rij'><span class='kolom1'>". $resultaat[$i]["id"] ."</span><span class='kolom2'>".$resultaat[$i]["datum"]."</span><span class='kolom3'>".$resultaat[$i]["aantal"]."</span></span>";
-}
+    echo "<span class='rij'><span class='kolom1'>" . $resultaat[$i]["id"] . "</span><span class='kolom2'>" . $resultaat[$i]["datum"] . "</span><span class='kolom3'>" . $resultaat[$i]["aantal"] . "</span></span>";
+}?>
 
-
-?>
+</body>
+</html>
