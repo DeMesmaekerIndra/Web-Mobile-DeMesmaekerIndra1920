@@ -63,7 +63,12 @@ $resultaat = fetchData("SELECT * from producten" , $conn);
 for($i = 0 ; $i < count($resultaat) ; $i++){
     // loop door ieder item van de $resultaat array, haal de gewenste info er uit en toon
     // deze in de vorm van html. In dit geval ingedeeld met spans.
-    echo "<span class='rij'><span class='kolom1'>". $resultaat[$i]["pr_id"] ."</span><span class='kolom2'>".$resultaat[$i]["pr_naam"]."</span><span class='kolom3'>".$resultaat[$i]["pr_prijs"]."</span><span class='kolom3'>".$resultaat[$i]["pr_ct_id"]."</span></span>";
+    $pr_ct_id = $resultaat[$i]["pr_ct_id"];
+    $cat_Name = fetchData("SELECT ct_naam FROM categories WHERE ct_id = $pr_ct_id", $conn)[0]["ct_naam"];
+    echo "<span class='rij'><span class='kolom1'>". $resultaat[$i]["pr_id"] ."</span>
+    <span class='kolom2'>".$resultaat[$i]["pr_naam"]."</span>
+    <span class='kolom3'>".$resultaat[$i]["pr_prijs"]."</span>
+    <span class='kolom3'>".$cat_Name."</span></span>";
 }
 
 
