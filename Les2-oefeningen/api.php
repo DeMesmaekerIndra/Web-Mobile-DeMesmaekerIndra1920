@@ -200,19 +200,6 @@ if ($authentication_required) {
     }
 }
 
-if (strcasecmp($_GET('m'), 'AddProducten') == 0) {
-    if (!$conn) {
-        $response['code'] = 0;
-        $response['status'] = $api_response_code['code']['HTTP Response'];
-        $response['data'] = mysqli_connect_error();
-    } else {
-        $response['code'] = 0;
-        $response['status'] = $api_response_code['code']['HTTP Response'];
-
-        $sql = "INSERT INTO producten VALUES ($)";
-    }
-}
-
 // --- productenlijst
 if (strcasecmp($_GET['m'], 'getProducten') == 0) {
 
@@ -241,7 +228,61 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
             $response['code'] = 1;
             $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
             $response['data'] = $rows;
+        }
+    }
+}
 
+if (strcasecmp($_GET['m'], 'getCategorie') == 0) {
+
+    if (!$conn) {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        $response['data'] = mysqli_connect_error();
+
+    } else {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        $ct_id = $postvars['ct_id'];
+        // de login nakijken
+        // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
+        // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
+        $lQuery = "SELECT * FROM Categories WHERE id = $ct_id;
+        $result = $conn->query($lQuery);
+        $rows = array();
+        if (!$result) {
+            $response['data'] = "db error";
+        } else {
+
+            while ($row = $result->fetch_assoc()) {
+                $rows[] = $row;
+            }
+
+            $response['code'] = 1;
+            $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+            $response['data'] = $rows;
+        }
+    }
+}
+
+if (strcasecmp($_GET['m'], 'addProducten') == 0) {
+    if (!$conn) {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code['code']['HTTP Response'];
+        $response['data'] = mysqli_connect_error();
+    } else {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code['code']['HTTP Response'];
+
+        $naam = $postvars["naam"];
+        $prijs = $postvars["prijs"];
+        $categorie = $postvars["categorie"];
+
+        $sql = "INSERT INTO producten(pr_naam, pr_prijs, pr_ct_id) VALUES ($naam, $prijs, $categorie)";
+
+        if (!mysqli_query($conn, $sql)) {
+            echo "Product not added";
+        } else {
+            echo "Product added";
         }
     }
 }

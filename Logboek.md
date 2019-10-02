@@ -1,4 +1,5 @@
 # Logboek
+## Totaal aantal uren: 10
 
 ## Week 1:
 * 4u les.
@@ -18,3 +19,5 @@
 ## Week 2:
 * 4u les.
     * Werken met API, CORS, voorbeeldoefeningen
+    * Uitbreiding oefening week 1, server & client size toevoegen & verwijderen van producten
+    * deel 2, prepared statements
