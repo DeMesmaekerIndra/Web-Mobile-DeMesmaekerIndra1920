@@ -285,7 +285,7 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
         // de login nakijken
         // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
         // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-        $lQuery = "select * FROM producten";
+        $lQuery = "select * FROM producten_2";
         $result = $conn->query($lQuery);
         $rows = array();
         if (!$result) {

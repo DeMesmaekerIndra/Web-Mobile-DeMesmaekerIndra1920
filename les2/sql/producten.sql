@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `producten`
 --
 
-CREATE TABLE IF NOT EXISTS `producten` (
+CREATE TABLE IF NOT EXISTS `producten_2` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Omschrijving` varchar(50) NOT NULL,
   `prijs` float NOT NULL DEFAULT '0',
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `producten` (
 -- Gegevens worden uitgevoerd voor tabel `producten`
 --
 
-INSERT INTO `producten` (`id`, `Omschrijving`, `prijs`) VALUES
+INSERT INTO `producten_2` (`id`, `Omschrijving`, `prijs`) VALUES
 (1, 'Fiets', 350.01),
 (2, 'Appelflap', 2);
 

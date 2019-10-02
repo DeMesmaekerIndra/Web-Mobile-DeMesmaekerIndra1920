@@ -88,7 +88,7 @@
                     // er zit minstens 1 item in list, we geven dit ook onmiddelijk weer
                     let tLijst = '<span class=\'rij kOdd\'><span>ID</span><span>Omschrijving</span><span>Prijs</span></span>';
                     for (let i = 0; i < list.length; i++) {
-                        tLijst += '<span class=\'rij\'><span>' + list[i].id + '</span><span>' + list[i].Omschrijving + '</span><span>' + list[i].prijs + '</span></span>';
+                        tLijst += '<span class=\'rij\'><span>' + list[i].ID + '</span><span>' + list[i].omschrijving + '</span><span>' + list[i].prijs + '</span></span>';
                     }
                     tLijst += '<br>';
 
