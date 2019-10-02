@@ -37,7 +37,14 @@ $password = ""; // dangerous
 $dbname = "test"; // standaard test databank
 
 // Define API response codes and their related HTTP response
-$api_response_code = array(0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'), 1 => array('HTTP Response' => 200, 'Message' => 'Success'), 2 => array('HTTP Response' => 403, 'Message' => 'HTTPS Required'), 3 => array('HTTP Response' => 401, 'Message' => 'Authentication Required'), 4 => array('HTTP Response' => 401, 'Message' => 'Authentication Failed'), 5 => array('HTTP Response' => 404, 'Message' => 'Invalid Request'), 6 => array('HTTP Response' => 400, 'Message' => 'Invalid Response Format'), 7 => array('HTTP Response' => 400, 'Message' => 'DB problems'));
+$api_response_code = array(0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'),
+    1 => array('HTTP Response' => 200, 'Message' => 'Success'),
+    2 => array('HTTP Response' => 403, 'Message' => 'HTTPS Required'),
+    3 => array('HTTP Response' => 401, 'Message' => 'Authentication Required'),
+    4 => array('HTTP Response' => 401, 'Message' => 'Authentication Failed'),
+    5 => array('HTTP Response' => 404, 'Message' => 'Invalid Request'),
+    6 => array('HTTP Response' => 400, 'Message' => 'Invalid Response Format'),
+    7 => array('HTTP Response' => 400, 'Message' => 'DB problems'));
 
 // Set default HTTP response of 'ok' or NOK in this case
 $response['code'] = 0;
