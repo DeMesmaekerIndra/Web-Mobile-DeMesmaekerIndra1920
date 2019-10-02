@@ -3,7 +3,7 @@
     /*jslint browser: true*/
     /*jslint devel: true*/
     let apiAddress = 'http://localhost/wm/les2/api.php?';
-    let alertEl = document.getElementById('alert');
+    let alertEl = document.getElementById('a');
     let opties = {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
