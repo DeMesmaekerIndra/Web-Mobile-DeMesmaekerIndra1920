@@ -25,3 +25,4 @@
 * 10/5/19 : 2h 10m
     * Begrijpen van api voorbeeld code : 30m.
     * Aanpassen van voorbeeld code voor oefening & experimentatie : 1h 40m
+    * Prepared statements gebruiken in vorige oefening : 3:00 -

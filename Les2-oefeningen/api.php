@@ -79,6 +79,19 @@ function deliver_response($format, $api_response)
 
 }
 
+function prepare_statement($sql, $conn)
+{
+    if (!($stmt = $conn->prepare($sql))) {
+        die('{"error":"Prepared Statement failed","errNo":"' . json_encode($conn->errno) . '",mysqlError":"' . json_encode($conn->error) . '","status":"fail"}');
+    }
+
+    if (!$stmt->execute()) {
+        die('{"error":"Prepared Statement execute failed","errNo":"' . json_encode($conn->errno) . '",mysqlError":"' . json_encode($conn->error) . '","status":"fail"}');
+    }
+
+    return $stmt;
+}
+
 // --- productenlijst
 if (strcasecmp($_GET['m'], 'getProducten') == 0) {
 
@@ -91,13 +104,13 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
     } else {
         $response['code'] = 0;
         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-
         $lQuery = "SELECT pr_id, pr_naam, pr_prijs, ct_naam
                     FROM producten
                     JOIN categories
                     ON pr_ct_id = ct_id
                     ORDER BY pr_id";
-        $result = $conn->query($lQuery);
+        $stmt = prepare_statement($lQuery, $conn);
+        $result = $stmt->get_result();
         $rows = array();
         if (!$result) {
             $response['data'] = "db error";
