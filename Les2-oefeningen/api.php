@@ -11,7 +11,8 @@ $password = ""; // dangerous
 $dbname = "test"; // standaard test databank
 
 // Define API response codes and their related HTTP response
-$api_response_code = array(0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'),
+$api_response_code = array(
+    0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'),
     1 => array('HTTP Response' => 200, 'Message' => 'Success'),
     2 => array('HTTP Response' => 403, 'Message' => 'HTTPS Required'),
     3 => array('HTTP Response' => 401, 'Message' => 'Authentication Required'),
@@ -81,6 +82,7 @@ function deliver_response($format, $api_response)
 // --- productenlijst
 if (strcasecmp($_GET['m'], 'getProducten') == 0) {
 
+    //Nakijken DB connectie
     if (!$conn) {
         $response['code'] = 0;
         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
@@ -89,42 +91,11 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
     } else {
         $response['code'] = 0;
         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-        // de login nakijken
-        // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
-        // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-        $lQuery = "select * FROM producten";
-        $result = $conn->query($lQuery);
-        $rows = array();
-        if (!$result) {
-            $response['data'] = "db error";
-        } else {
 
-            while ($row = $result->fetch_assoc()) {
-                $rows[] = $row;
-            }
-
-            $response['code'] = 1;
-            $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-            $response['data'] = $rows;
-        }
-    }
-}
-
-if (strcasecmp($_GET['m'], 'getCategorie') == 0) {
-
-    if (!$conn) {
-        $response['code'] = 0;
-        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-        $response['data'] = mysqli_connect_error();
-
-    } else {
-        $response['code'] = 0;
-        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-        $ct_id = $postvars['ct_id'];
-        // de login nakijken
-        // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
-        // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-        $lQuery = "SELECT * FROM Categories WHERE id = $ct_id";
+        $lQuery = "SELECT pr_id, pr_naam, pr_prijs, ct_naam
+                    FROM producten
+                    JOIN categories
+                    ON pr_ct_id = ct_id";
         $result = $conn->query($lQuery);
         $rows = array();
         if (!$result) {
@@ -156,12 +127,6 @@ if (strcasecmp($_GET['m'], 'addProducten') == 0) {
         $categorie = $postvars["categorie"];
 
         $sql = "INSERT INTO producten(pr_naam, pr_prijs, pr_ct_id) VALUES ($naam, $prijs, $categorie)";
-
-        if (!mysqli_query($conn, $sql)) {
-            echo "Product not added";
-        } else {
-            echo "Product added";
-        }
     }
 }
 

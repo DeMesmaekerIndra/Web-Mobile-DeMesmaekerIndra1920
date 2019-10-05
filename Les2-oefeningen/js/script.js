@@ -32,9 +32,7 @@
                     // er zit minstens 1 item in list, we geven dit ook onmiddelijk weer
                     let tLijst = '<span class=\'rij kOdd\'><span>pr_id</span><span>pr_naam</span><span>pr_prijs</span><span>pr_categorie</span></span>';
                     for (let i = 0; i < list.length; i++) {
-                        let cat_id = list[i].pr_ct_id;
-                        let cat_name = getApiProductCategory(cat_id);
-                        tLijst += '<span class=\'rij\'><span>' + list[i].pr_id + '</span><span>' + list[i].pr_naam + '</span><span>' + list[i].pr_prijs + '</span><span>' + list[i].pr_ct_id + '</span></span>';
+                        tLijst += '<span class=\'rij\'><span>' + list[i].pr_id + '</span><span>' + list[i].pr_naam + '</span><span>' + list[i].pr_prijs + '</span><span>' + list[i].ct_naam + '</span></span>';
                     }
                     tLijst += '<br>';
 
@@ -48,31 +46,14 @@
             });
     };
 
-    let getApiProductCategory = function (id) {
-        let url = apiAdr + 'getCategorie';
-
-        options.body = JSON.stringify({
-            format: 'json',
-            ct_id: id
-        });
-
-        fetch(url, options)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                return data;
-            });
-    };
-
     let addApiProducts = function () {
-        let url = apiAdr + 'addProducten';
+        let url = apiAdr + 'm=addProducten';
 
         options.body = JSON.stringify({
             format: 'json',
             naam: document.getElementById('Productnaam').value,
             prijs: document.getElementById('Prijs').value,
-            categorie: document.getElementById('Categorie').value
+            categorie: document.getElementById('Categorie').value,
         });
 
         fetch(url, options);
