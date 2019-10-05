@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 12h 10m
+## Totaal aantal uren: 13h
 
 ## Week 1:
 * 4u les.
@@ -13,7 +13,7 @@
     * Tonen van categorie naam oef 2 : 15m.
     * PHP documenten juiste html headings & tags gegeven : 5m.
     * W3schools exercises : 25m.
-    * oef 2 form invoegen producten : 1u;
+    * oef 2 form invoegen producten : 1h.
     * Sources: W3Schools, form & php tutorial https://www.youtube.com/watch?v=0BoZc5oUioA
 
 ## Week 2:
@@ -22,7 +22,7 @@
     * Uitbreiding oefening week 1, server & client size toevoegen & verwijderen van producten
     * deel 2, prepared statements
 
-* 10/5/19 : 2h 10m
+* 10/5/19 : 3h
     * Begrijpen van api voorbeeld code : 30m.
     * Aanpassen van voorbeeld code voor oefening & experimentatie : 1h 40m
-    * Prepared statements gebruiken in vorige oefening : 3:00 -
+    * Prepared statements gebruiken in vorige oefening : 50m
