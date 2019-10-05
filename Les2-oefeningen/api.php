@@ -4,32 +4,6 @@ header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Max-Age: 1000');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
-//
-// API Demo
-//
-// This script provides a RESTful API interface for a web application
-//
-// Input:
-//
-// $_GET['format'] = [ json | html | xml ]
-// $_GET['m'] = []
-//
-// Output: A formatted HTTP response
-//
-// Author: Mark Roland
-//
-// History:
-// 11/13/2012 - Created
-//
-// Adapted by:
-// Steven Ophalvens
-// -------------------------
-// Tijdens een volgende les volgt een meer beveiligde, maar iets meer complexe versie van deze API.
-// -------------------------
-
-// --- Step 0 : connect to db
-//require_once "dbcon.php";
-
 // een verbinding leggen met de databank
 $servername = "localhost";
 $username = "root"; // dangerous
@@ -80,7 +54,6 @@ $postvars = json_decode($body, true);
 // **/
 function deliver_response($format, $api_response)
 {
-
     // Define HTTP responses
     $http_response_code = array(200 => 'OK', 400 => 'Bad Request', 401 => 'Unauthorized', 403 => 'Forbidden', 404 => 'Not Found');
 
@@ -99,105 +72,10 @@ function deliver_response($format, $api_response)
         // Deliver formatted data
         echo $json_response;
 
-    } elseif (strcasecmp($format, 'xml') == 0) {
-
-        // Set HTTP Response Content Type
-        header('Content-Type: application/xml; charset=utf-8');
-
-        // Format data into an XML response (This is only good at handling string data, not arrays)
-        $xml_response = '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<response>' . "\n" . "\t" . '<code>' . $api_response['code'] . '</code>' . "\n" . "\t" . '<data>' . $api_response['data'] . '</data>' . "\n" . '</response>';
-
-        // Deliver formatted data
-        echo $xml_response;
-
-    } else {
-
-        // Set HTTP Response Content Type (This is only good at handling string data, not arrays)
-        header('Content-Type: text/html; charset=utf-8');
-
-        // Deliver formatted data
-        echo $api_response['data'];
-
     }
-
     // End script process
     exit;
 
-}
-
-// security issue : als de m = register, geen login nodig ...
-if (strcasecmp($_GET['m'], 'register') == 0) {
-    $authentication_required = false;
-}
-if (strcasecmp($_GET['m'], 'hello') == 0) {
-    $authentication_required = false; // om deze functie te testen is geen login nodig ...
-}
-
-// --- Step 2: Authorization
-
-// Optionally require connections to be made via HTTPS
-if ($HTTPS_required && $_SERVER['HTTPS'] != 'on') {
-    $response['code'] = 2;
-    $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-    $response['data'] = $api_response_code[$response['code']]['Message'];
-
-    // Return Response to browser. This will exit the script.
-    deliver_response($_GET['format'], $response);
-}
-
-// Optionally require user authentication
-if ($authentication_required) {
-
-    if (empty($postvars['user']) || empty($postvars['password'])) {
-        $response['code'] = 3;
-        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-        $response['data'] = $api_response_code[$response['code']]['Message'];
-
-        // Return Response to browser
-        deliver_response($postvars['format'], $response);
-
-    }
-
-    // Return an error response if user fails authentication. This is a very simplistic example
-    // that should be modified for security in a production environment
-    else {
-
-        if (!$conn) {
-            $response['code'] = 7;
-            $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-            $response['data'] = mysqli_connect_error();
-
-            // Return Response to browser
-            deliver_response($postvars['format'], $response);
-
-        } else {
-            // de login nakijken
-            $lQuery = "select * FROM users where NAME like '" . $postvars['name'] . "' and PW like '" . $postvars['password'] . "'";
-            $result = $conn->query($lQuery);
-            $rows = array();
-            if (!$result) {
-                $response['code'] = 7;
-                $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-                $response['data'] = mysqli_connect_error();
-
-                // Return Response to browser
-                deliver_response($postvars['format'], $response);
-            } else {
-                //$response['data'] = "ok";
-                while ($row = $result->fetch_assoc()) {
-                    $rows[] = $row;
-                }
-                if (count($rows) == 0) {
-                    $response['code'] = 4;
-                    $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-                    $response['data'] = $api_response_code[$response['code']]['Message'];
-
-                    // Return Response to browser
-                    deliver_response($postvars['format'], $response);
-                }
-            }
-        }
-    }
 }
 
 // --- productenlijst
@@ -246,7 +124,7 @@ if (strcasecmp($_GET['m'], 'getCategorie') == 0) {
         // de login nakijken
         // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
         // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-        $lQuery = "SELECT * FROM Categories WHERE id = $ct_id;
+        $lQuery = "SELECT * FROM Categories WHERE id = $ct_id";
         $result = $conn->query($lQuery);
         $rows = array();
         if (!$result) {

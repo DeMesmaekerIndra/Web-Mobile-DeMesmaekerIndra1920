@@ -37,7 +37,8 @@ $password = ""; // dangerous
 $dbname = "test"; // standaard test databank
 
 // Define API response codes and their related HTTP response
-$api_response_code = array(0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'),
+$api_response_code = array(
+    0 => array('HTTP Response' => 400, 'Message' => 'Unknown Error'),
     1 => array('HTTP Response' => 200, 'Message' => 'Success'),
     2 => array('HTTP Response' => 403, 'Message' => 'HTTPS Required'),
     3 => array('HTTP Response' => 401, 'Message' => 'Authentication Required'),
