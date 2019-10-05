@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 10
+## Totaal aantal uren: 12h 10m
 
 ## Week 1:
 * 4u les.
@@ -22,6 +22,6 @@
     * Uitbreiding oefening week 1, server & client size toevoegen & verwijderen van producten
     * deel 2, prepared statements
 
-* 10/5/19 : 12:50 - 
+* 10/5/19 : 2h 10m
     * Begrijpen van api voorbeeld code : 30m.
-    * Aanpassen van voorbeeld code voor oefening & experimentatie
+    * Aanpassen van voorbeeld code voor oefening & experimentatie : 1h 40m

@@ -56,7 +56,7 @@
             categorie: document.getElementById('Categorie').value,
         });
 
-        fetch(url, options);
+        fetch(url, options).then(setTimeout(getApiProducten, 100));
     };
 
     let showContents = function (content) {
@@ -66,10 +66,9 @@
     document.getElementById('btnGetProducten').addEventListener('click', function () {
         getApiProducten();
     });
-    document.getElementById('btnAdd').addEventListener('submit', function (e) {
+    document.getElementById('btnAdd').addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         addApiProducts();
-        getApiProducten();
     });
 })();

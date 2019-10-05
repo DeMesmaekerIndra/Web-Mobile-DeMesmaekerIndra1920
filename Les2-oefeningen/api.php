@@ -95,7 +95,8 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
         $lQuery = "SELECT pr_id, pr_naam, pr_prijs, ct_naam
                     FROM producten
                     JOIN categories
-                    ON pr_ct_id = ct_id";
+                    ON pr_ct_id = ct_id
+                    ORDER BY pr_id";
         $result = $conn->query($lQuery);
         $rows = array();
         if (!$result) {
@@ -126,7 +127,8 @@ if (strcasecmp($_GET['m'], 'addProducten') == 0) {
         $prijs = $postvars["prijs"];
         $categorie = $postvars["categorie"];
 
-        $sql = "INSERT INTO producten(pr_naam, pr_prijs, pr_ct_id) VALUES ($naam, $prijs, $categorie)";
+        $sql = "INSERT INTO producten(pr_naam, pr_prijs, pr_ct_id) VALUES ('$naam', '$prijs', '$categorie')";
+        mysqli_query($conn, $sql);
     }
 }
 
