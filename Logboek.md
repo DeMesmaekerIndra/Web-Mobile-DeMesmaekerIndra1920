@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 13h
+## Totaal aantal uren: 14h
 
 ## Week 1:
 * 4u les.
@@ -24,5 +24,13 @@
 
 * 10/5/19 : 3h
     * Begrijpen van api voorbeeld code : 30m.
-    * Aanpassen van voorbeeld code voor oefening & experimentatie : 1h 40m
-    * Prepared statements gebruiken in vorige oefening : 50m
+    * Aanpassen van voorbeeld code voor oefening & experimentatie : 1h 40m.
+    * Prepared statements gebruiken in vorige oefening : 50m.
+
+* 10/7/19 : 1h
+    * Online host uit 1ste semester opzoeken & gebruiken voor testen.
+    * Leren werken met DB tool & phpMyAdmin op hosting site.
+    * test DB aanmaken, tabellen 'producten', 'categorie' opnieuw toevoegen.
+    * Api script aanpassen aanpassen ivm met auto gegenereerde naam van de DB en user. Toevoegen van passwoord.
+    * testdata toevoegen.
+    * https://webandmobile1920.000webhostapp.com (Oefening les 2, kan veranderen).
