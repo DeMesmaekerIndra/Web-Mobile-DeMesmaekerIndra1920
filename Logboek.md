@@ -44,4 +44,4 @@
 
 * 9/10/19 1u:
     * hybdride app data doen ophalen & doorsturen aan api op https://webandmobile1920.000webhostapp.com (code van oefening les 2).
-    * Content security security policy
+    * Content security policy
