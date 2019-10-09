@@ -38,8 +38,10 @@
 ## Week 3:
 * 4u les.
     * Leren werken met Cordova.
+    * Installatie Android Studio
     * Installatie Cordova.
+    * Uit testen hello world app
 
 * 9/10/19 1u:
-    * hybdride app data doen ophalen & doorsturen aan api op https://webandmobile1920.000webhostapp.com.
+    * hybdride app data doen ophalen & doorsturen aan api op https://webandmobile1920.000webhostapp.com (code van oefening les 2).
     * Content security security policy
