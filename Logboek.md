@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 23u
+## Totaal aantal uren: 27u
 
 ## Week 1:
 * 4u les.
@@ -45,8 +45,14 @@
 * 9/10/19 1u:
     * hybdride app data doen ophalen & doorsturen aan api op https://webandmobile1920.000webhostapp.com (code van oefening les 2).
     * Content security policy
-    
+
 ## Week 4:
 * 4u les.
    * Kennismaking Framework7
    * installatie & voorbeeldoefeningen
+
+## Week 5:
+* 4u les.
+    * Werken aan project
+    * ERD & fysiek model DB opstellen
+    * Concept verder uitwerken
