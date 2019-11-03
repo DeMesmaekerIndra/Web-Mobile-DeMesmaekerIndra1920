@@ -74,11 +74,20 @@ let app = new Framework7({
 
 function showLocation(position) {
     if (app.view.current.router.url === '/locatie/') {
-    // success functie
+        // success functie
 
+        let lat1 = position.coords.latitude;
+        let lon1 = position.coords.longitude;
+        let latBrussel = 50.8504500;
+        let lonBrussel = 4.3487800;
+
+        //Zie haversine.js
         $$('#locatieResultaat').html(
-            `<p>Latitude: ${position.coords.latitude}</p><p>Longitude: ${position.coords.longitude}</p><p>Accuracy: ${position.coords.accuracy}m.</p><p>Timestamp: ${new Date(position.timestamp)}</p>`
-        );
+            `<p>Latitude: ${position.coords.latitude}</p>
+            <p>Longitude: ${position.coords.longitude}</p>
+            <p>Accuracy: ${position.coords.accuracy}m.</p>
+            <p>Timestamp: ${new Date(position.timestamp)}</p>
+            <p>Distance To Brussels: ${getDist(lat1, lon1, latBrussel, lonBrussel)}</p>`);
     }
 }
 
