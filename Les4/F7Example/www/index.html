@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' https://ophalvens.net 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+
+  <meta name="theme-color" content="#007aff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>F7Cordova</title> 
+  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app"class="theme-dark">
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover theme-dark panel-init">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Linker Paneel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>
+                Ik ben een demonstrant van linkse strekking<br>
+                Ik ben hier gewoon blijven hangen omdat ik iets wil demonstreren!<br>
+                Ik demonstreer dus hoe je een panel aan de linkerzijde gebruikt.
+              </p>
+              <p>Normaal plaats je hier iets minder zever ...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Views/Tabs container -->
+    <div class="views tabs safe-areas">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar toolbar-bottom tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon f7-icons if-not-md">house_fill</i>
+            <i class="icon material-icons if-md">home</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+          <a href="#view-locatie" class="tab-link">
+            <i class="icon f7-icons if-not-md">location_circle_fill</i>
+            <i class="icon material-icons if-md">my_location</i>
+            <span class="tabbar-label">Locatie</span>
+          </a>
+          <a href="#view-gegevens" class="tab-link">
+            <i class="icon f7-icons if-not-md">square_list_fill</i>
+            <i class="icon material-icons if-md">view_list</i>
+            <span class="tabbar-label">Data</span>
+          </a>
+          
+        </div>
+      </div>
+
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main view-init tab tab-active">
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar navbar-large">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons if-not-md">menu</i>
+                  <i class="icon material-icons if-md">menu</i>
+                </a>
+              </div>
+              <div class="title sliding">F7Cordova</div>
+              
+              <div class="title-large">
+                <div class="title-large-text">F7 Cordova Voorbeeld</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block block-strong">
+              <p>Dit is een beperkte app om een aantal functies van Cordova en F7 te demonstreren.</p>
+              <p>In deze app gaan we demonstreren hoe we met locatie en externe gegevens kunnen werken.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Gegevens View -->
+      <div id="view-gegevens" class="view view-init tab" data-view="gegevens" data-url="/gegevens/">
+        <!-- Gegevens page will be loaded here dynamically from /gegevens/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-locatie" class="view view-init tab" data-view="locatie" data-url="/locatie/">
+        <!-- Locatie page will be loaded here dynamically from /locatie/ route -->
+      </div>
+    </div>
+
+
+  <!-- CORDOVA_PLACEHOLDER_DONT_REMOVE -->
+  <!-- Framework7 library -->
+  <script src="framework7/js/framework7.bundle.min.js"></script>
+  <!-- Cordova APIs -->
+  <script src="js/cordova-app.js"></script>
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+  <!-- App scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

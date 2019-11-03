@@ -56,3 +56,7 @@
     * Werken aan project
     * ERD & fysiek model DB opstellen
     * Concept verder uitwerken
+
+## Week6:
+* 3/11/19:
+    *
