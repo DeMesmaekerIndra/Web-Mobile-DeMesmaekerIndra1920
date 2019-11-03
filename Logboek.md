@@ -58,5 +58,8 @@
     * Concept verder uitwerken
 
 ## Week6:
-* 3/11/19:
-    *
+* 3/11/19 : 2u
+    * Afstand tussen Brussel & huidige locatie bepalen : 1u.
+	* Code aanpassen om producten van eigen API op te vragen : 20m.
+	* Code aanpassen om producten toe te voegen via eigen API : 20m.
+	* Code (API & Js) aanpassen om product te verwijderen : 20m.

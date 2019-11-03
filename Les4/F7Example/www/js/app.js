@@ -120,7 +120,7 @@ function positionError(error) {
 
 // ---------- uitbreiding voorbeeld stap-4 gegevens ---------------- //
 
-let apiAddress = 'https://ophalvens.net/mi3/testdb.php?';
+let apiAddress = 'https://webandmobile1920.000webhostapp.com/api.php?';
 let opties = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -137,13 +137,11 @@ function getList() {
 
     // body data type must match "Content-Type" header
     opties.body = JSON.stringify({
-        format: 'json',
-        table: 'producten',
-        bewerking: 'get'
+        format: 'json'
     });
 
     // test de api
-    fetch(apiAddress, opties)
+    fetch(apiAddress + 'm=GetProducten', opties)
         .then(function (response) {
             return response.json();
         })
@@ -155,7 +153,9 @@ function getList() {
                 // er zit minstens 1 item in list, we geven dit ook onmiddelijk weer
                 let tlines = '';
                 for (let i = 0, len = list.length; i < len; i++) {
-                    tlines += `<div class='row'><span class='col'>${list[i].PR_naam}</span><span class='col'>${ list[i].prijs}</span><button onClick='sendAjax(${list[i].PR_ID});' class='button button-fill button-raised button-small color-orange col'>Verwijder</button></div>`;
+                    tlines += `<div class='row'><span class='col'>${list[i].pr_naam}</span>
+                                <span class='col'>${ list[i].pr_prijs}</span>
+                                <button onClick='sendAjax(${list[i].pr_id});' class='button button-fill button-raised button-small color-orange col'>Verwijder</button></div>`;
                 }
 
                 $$('#pList').html(tlines);
@@ -177,12 +177,10 @@ function sendAjax(id) {
     // body data type must match "Content-Type" header
     opties.body = JSON.stringify({
         format: 'json',
-        table: 'producten',
-        bewerking: 'delete',
         id: id
     });
 
-    fetch(apiAddress, opties)
+    fetch(apiAddress + 'm=deleteProducten', opties)
         .then(function (response) {
             return response.json();
         })
@@ -197,9 +195,6 @@ function sendAjax(id) {
             // verwerk de fout
             app.dialog.alert('POST failed. :' + errorThrown, 'Item toegevoegd');
         });
-
-
-
 }
 
 function voegToe() {
@@ -207,14 +202,12 @@ function voegToe() {
     // body data type must match "Content-Type" header
     opties.body = JSON.stringify({
         format: 'json',
-        table: 'producten',
-        bewerking: 'add',
-        PR_naam: $$('#PR_naam').val(),
+        naam: $$('#PR_naam').val(),
         prijs: $$('#prijs').val(),
-        PR_CT_ID: (cat === 'fruit' ? 1 : 2)
+        categorie: (cat === 'fruit' ? 1 : 2)
     });
 
-    fetch(apiAddress, opties)
+    fetch(apiAddress + 'm=addProducten', opties)
         .then(function (response) {
             return response.json();
         })
