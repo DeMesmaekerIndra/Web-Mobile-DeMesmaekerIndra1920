@@ -57,7 +57,7 @@
     * ERD & fysiek model DB opstellen
     * Concept verder uitwerken
 
-## Week6:
+## Week 6:
 * 3/11/19 : 2u.
     * Afstand tussen Brussel & huidige locatie bepalen : 1u.
 	* Code aanpassen om producten van eigen API op te vragen : 20m.
