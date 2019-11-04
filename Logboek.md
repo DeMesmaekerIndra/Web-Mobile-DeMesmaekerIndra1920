@@ -64,7 +64,7 @@
 	* Code aanpassen om producten toe te voegen via eigen API : 20m.
 	* Code (API & Js) aanpassen om product te verwijderen : 20m.
 	
-* 4/11/19 : 2U.
+* 4/11/19 : 2u.
 	* Iconen veranderen (Gebruikte iconen: http://icon-works.com/index.html) : 30m
 	* Gebruik maken van cordova-plugin-camera 1:30m
 		* Note: Plugins niet toevoegen in root van f7 project maar in "f7Project>Cordova" <- Hiermee veel tijd verspilt
