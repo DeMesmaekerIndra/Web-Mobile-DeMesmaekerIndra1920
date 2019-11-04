@@ -33,7 +33,8 @@
         "cordova-plugin-statusbar",
         "cordova-plugin-keyboard",
         "cordova-plugin-splashscreen",
-        "cordova-plugin-device"
+        "cordova-plugin-device",
+        "cordova-plugin-camera"
       ]
     }
   },
@@ -42,7 +43,6 @@
     "serve": "http-server ./www/ -o -c 1 -a localhost -p 8080",
     "build-cordova": "node ./build/build.js && cd cordova && cordova build",
     "build-run-cordova": "node ./build/build.js && cd cordova && cordova run",
-    "run-cordova": "cd cordova && cordova run",
     "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './www/fonts/'"
   },
   "browserslist": [
@@ -54,6 +54,8 @@
     "Samsung >= 5"
   ],
   "dependencies": {
+    "cordova-android": "^6.4.0",
+    "cordova-plugin-whitelist": "^1.3.4",
     "dom7": "2.1.3",
     "framework7": "5.0.4",
     "framework7-icons": "3.0.0",
@@ -64,5 +66,13 @@
     "cpy-cli": "2.0.0",
     "http-server": "0.11.1",
     "rimraf": "3.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

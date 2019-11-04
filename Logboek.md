@@ -66,3 +66,5 @@
 	
 * 4/11/19 : 30m.
 	* Iconen veranderen (Gebruikte iconen: http://icon-works.com/index.html) : 30m
+	* Gebruik maken van cordova-plugin-camera 1:30m
+		* Note: Plugins niet toevoegen in root van f7 project maar in "f7Project>Cordova" <- Hiermee veel tijd verspilt
