@@ -1,17 +1,30 @@
 /* Material Icons Font (for MD theme) */
-@font-face {
+/*@font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/MaterialIcons-Regular.eot);
   src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
-       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+    local('MaterialIcons-Regular'),
+    url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}*/
+
+@font-face {
+  font-family: 'icon-worksregular';
+  src: url('../fonts/icon-works-webfont.eot');
+  src: url('../fonts/icon-works-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icon-works-webfont.woff') format('woff'),
+    url('../fonts/icon-works-webfont.ttf') format('truetype'),
+    url('../fonts/icon-works-webfont.svg#icon-worksregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-.material-icons {
-  font-family: 'Material Icons';
+
+.iconworks {
+  content: attr(data-icon);
+  font-family: 'icon-worksregular';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -29,15 +42,16 @@
 }
 
 /* Framework7 Icons Font (for iOS theme) */
-@font-face {
+/*@font-face {
   font-family: 'Framework7 Icons';
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Framework7Icons-Regular.eot");
   src: url("../fonts/Framework7Icons-Regular.woff2") format("woff2"),
-       url("../fonts/Framework7Icons-Regular.woff") format("woff"),
-       url("../fonts/Framework7Icons-Regular.ttf") format("truetype");
-}
+    url("../fonts/Framework7Icons-Regular.woff") format("woff"),
+    url("../fonts/Framework7Icons-Regular.ttf") format("truetype");
+}*/
+
 .f7-icons {
   font-family: 'Framework7 Icons';
   font-weight: normal;

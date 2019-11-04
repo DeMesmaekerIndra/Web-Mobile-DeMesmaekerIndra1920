@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 29u
+## Totaal aantal uren: 29u 30m.
 
 ## Week 1:
 * 4u les.
@@ -8,7 +8,7 @@
     * Installatie XAMPP.
     * Oefenen met phpMyAdmin
 
-* 10/1/19 : 2u.
+* 1/10/19 : 2u.
     * Werken aan oefening 2, foreign key toevoegen : 15m.
     * Tonen van categorie naam oef 2 : 15m.
     * PHP documenten juiste html headings & tags gegeven : 5m.
@@ -22,12 +22,12 @@
     * Uitbreiding oefening week 1, server & client size toevoegen & verwijderen van producten.
     * deel 2, prepared statements.
 
-* 10/5/19 : 3u
+* 5/10/19 : 3u.
     * Begrijpen van api voorbeeld code : 30m.
     * Aanpassen van voorbeeld code voor oefening & experimentatie : 1u 40m.
     * Prepared statements gebruiken in vorige oefening : 50m.
 
-* 10/7/19 : 1u
+* 7/10/19 : 1u.
     * Online host uit 1ste semester opzoeken & gebruiken voor testen.
     * Leren werken met DB tool & phpMyAdmin op hosting site.
     * test DB aanmaken, tabellen 'producten', 'categorie' opnieuw toevoegen.
@@ -58,8 +58,11 @@
     * Concept verder uitwerken
 
 ## Week6:
-* 3/11/19 : 2u
+* 3/11/19 : 2u.
     * Afstand tussen Brussel & huidige locatie bepalen : 1u.
 	* Code aanpassen om producten van eigen API op te vragen : 20m.
 	* Code aanpassen om producten toe te voegen via eigen API : 20m.
 	* Code (API & Js) aanpassen om product te verwijderen : 20m.
+	
+* 4/11/19 : 30m.
+	* Iconen veranderen (Gebruikte iconen: http://icon-works.com/index.html) : 30m
