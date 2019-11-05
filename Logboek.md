@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 31u.
+## Totaal aantal uren: 32u30m.
 
 ## Week 1:
 * 4u les.
@@ -64,7 +64,16 @@
 	* Code aanpassen om producten toe te voegen via eigen API : 20m.
 	* Code (API & Js) aanpassen om product te verwijderen : 20m.
 	
-* 4/11/19 : 30m.
+* 4/11/19 : 1u 30m.
 	* Iconen veranderen (Gebruikte iconen: http://icon-works.com/index.html) : 30m
-	* Gebruik maken van cordova-plugin-camera 1:30m
+	* Gebruik maken van cordova-plugin-camera : 1u 30m
 		* Note: Plugins niet toevoegen in root van f7 project maar in "f7Project>Cordova" <- Hiermee veel tijd verspilt
+		
+* 5/11/19 : 1u30m
+	* Gebruik maken van cordova-barcode-generator in F7 oefenproject :
+		*Installatie
+			* Note: Problemen ondervonden met required cordova-android version voor plugins. (Installed: 8.1.0. Barcode-plugin req.:<=6.3.0)
+		* Barcode genereren naar (https://webandmobile1920.000webhostapp.com)
+		* Barcode kunnen lezen & tekst weergeven
+		
+	
