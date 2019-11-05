@@ -70,8 +70,8 @@
 		* Note: Plugins niet toevoegen in root van f7 project maar in "f7Project>Cordova" <- Hiermee veel tijd verspilt
 
 * 5/11/19 : 1u30m
-	* Gebruik maken van cordova-barcode-generator in F7 oefenproject :
-		*Installatie
-			* Note: Problemen ondervonden met required cordova-android version voor plugins. (Installed: 8.1.0. Barcode-plugin req.:<=6.3.0)
-		* Barcode genereren naar (https://webandmobile1920.000webhostapp.com)
-		* Barcode kunnen lezen & tekst weergeven
+	* Gebruik maken van cordova-barcode-generator in F7 oefenproject
+	*Installatie
+		* Note: Problemen ondervonden met required cordova-android version voor plugins. (Installed: 8.1.0. Barcode-plugin req.:<=6.3.0)
+	* Barcode genereren naar (https://webandmobile1920.000webhostapp.com)
+	* Barcode kunnen lezen & tekst weergeven
