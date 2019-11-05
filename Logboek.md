@@ -57,23 +57,21 @@
     * ERD & fysiek model DB opstellen
     * Concept verder uitwerken
 
-## Week6:
+## Week 6:
 * 3/11/19 : 2u.
     * Afstand tussen Brussel & huidige locatie bepalen : 1u.
 	* Code aanpassen om producten van eigen API op te vragen : 20m.
 	* Code aanpassen om producten toe te voegen via eigen API : 20m.
 	* Code (API & Js) aanpassen om product te verwijderen : 20m.
-	
-* 4/11/19 : 1u 30m.
+
+* 4/11/19 : 2u.
 	* Iconen veranderen (Gebruikte iconen: http://icon-works.com/index.html) : 30m
 	* Gebruik maken van cordova-plugin-camera : 1u 30m
 		* Note: Plugins niet toevoegen in root van f7 project maar in "f7Project>Cordova" <- Hiermee veel tijd verspilt
-		
+
 * 5/11/19 : 1u30m
 	* Gebruik maken van cordova-barcode-generator in F7 oefenproject :
 		*Installatie
 			* Note: Problemen ondervonden met required cordova-android version voor plugins. (Installed: 8.1.0. Barcode-plugin req.:<=6.3.0)
 		* Barcode genereren naar (https://webandmobile1920.000webhostapp.com)
 		* Barcode kunnen lezen & tekst weergeven
-		
-	
