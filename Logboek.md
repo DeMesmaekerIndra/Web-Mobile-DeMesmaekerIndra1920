@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 32u30m.
+## Totaal aantal uren: 36u30m.
 
 ## Week 1:
 * 4u les.
@@ -57,7 +57,7 @@
     * ERD & fysiek model DB opstellen
     * Concept verder uitwerken
 
-## Week 6:
+## Herfsvakantie:
 * 3/11/19 : 2u.
     * Afstand tussen Brussel & huidige locatie bepalen : 1u.
 	* Code aanpassen om producten van eigen API op te vragen : 20m.
@@ -75,3 +75,9 @@
 		    * Note: Problemen ondervonden met required cordova-android version voor plugins. (Installed: 8.1.0. Barcode-plugin req.:<=6.3.0)
 	    * Barcode genereren naar (https://webandmobile1920.000webhostapp.com)
 	    * Barcode kunnen lezen & tekst weergeven
+
+## Week 6:
+*	4u les.
+	* Kennis maken met native apps & android studio
+	* Hello world app
+	* Start udacity course 1 & 2
