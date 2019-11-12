@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 36u30m.
+## Totaal aantal uren: 37u.
 
 ## Week 1:
 * 4u les.
@@ -81,3 +81,6 @@
 	* Kennis maken met native apps & android studio
 	* Hello world app
 	* Start udacity course 1 & 2
+
+## Week 7:
+	* Databank maken in phpMyAdmin + export van sql : 30m
