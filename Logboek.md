@@ -83,10 +83,12 @@
 	* Start udacity course 1 & 2
 
 ## Week 7:
-	* Databank maken in phpMyAdmin + export van sql : 30m
+* 11/11/19 : 30m
+	* Databank maken in phpMyAdmin + export van sql
 
 ## Week 8:
-	* Werken aan backend van project : 5u
+* 19/11/19 : 5u
+	* Werken aan backend van project
 		* Verder verfijnen van de databank (missende relaties, nulllables, default values, ...)
 		* Beginnen met opmaken van API
 			* Door de oefeningen gaan kijken naar de juiste manier van werken
