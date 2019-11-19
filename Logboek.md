@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 37u.
+## Totaal aantal uren: 42u.
 
 ## Week 1:
 * 4u les.
@@ -84,3 +84,14 @@
 
 ## Week 7:
 	* Databank maken in phpMyAdmin + export van sql : 30m
+
+## Week 8:
+	* Werken aan backend van project : 5u
+		* Verder verfijnen van de databank (missende relaties, nulllables, default values, ...)
+		* Beginnen met opmaken van API
+			* Door de oefeningen gaan kijken naar de juiste manier van werken
+			* ophalen van alle/specifieke gegevens uit gewenste tabellen
+		* API hosten op een domein (https://webandmobilefme.000webhostapp.com)
+			* Note: We proberen een eigen host server te gebruiken, de hosting op 000webhost is momenteel enkel voor het testen van de API
+		* HTML index pagina & script gemaakt om gemakkelijk de api te kunnen testen
+		* FileZilla geïnstalleerd als FTP client om gemakkelijk de gehoste bestanden te bewerken
