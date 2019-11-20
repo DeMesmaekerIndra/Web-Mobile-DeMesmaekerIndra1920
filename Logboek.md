@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 42u.
+## Totaal aantal uren: 46u.
 
 ## Week 1:
 * 4u les.
@@ -97,3 +97,10 @@
 			* Note: We proberen een eigen host server te gebruiken, de hosting op 000webhost is momenteel enkel voor het testen van de API
 		* HTML index pagina & script gemaakt om gemakkelijk de api te kunnen testen
 		* FileZilla geïnstalleerd als FTP client om gemakkelijk de gehoste bestanden te bewerken
+
+* 4u les.
+	* Verder werken aan API project
+		* Ophalen gegevens van alle tabellen
+		* toevoegen van record voor 2 tabellen
+	* Verbeteringen/suggesties door docent
+		* Note: API zal een redesign nodig hebben
