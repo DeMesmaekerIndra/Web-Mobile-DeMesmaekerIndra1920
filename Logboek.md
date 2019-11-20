@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 46u.
+## Totaal aantal uren: 51u.
 
 ## Week 1:
 * 4u les.
@@ -104,3 +104,10 @@
 		* toevoegen van record voor 2 tabellen
 	* Verbeteringen/suggesties door docent
 		* Note: API zal een redesign nodig hebben
+
+* 20/11/19 : 5u
+	* Overhaul van API volgens aanbevelingen/suggesties
+		* Toevoegen van HTTP responses
+		* Aangepaste fout berichten, status, code vanuit API terugsturen
+		* Client moet niet langer tabel doorsturen
+		* Heb Api.php opgesplitst in Api.php -> functions.php -> dbConnection.php -> retrieveData.php -> insertData.php
