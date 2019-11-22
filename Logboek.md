@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 50u.
+## Totaal aantal uren: 52u 30m
 
 ## Week 1:
 * 4u les.
@@ -113,7 +113,8 @@
 		* Heb Api.php opgesplitst in Api.php -> functions.php -> dbConnection.php -> retrieveData.php -> insertData.php
 		* Mogelijk om een hele tabel op te vragen of een enkele record op basis van de primaire sleutel
 
-* 22/11/19 : 2u
+* 22/11/19 : 2u30m
 	* API project
 		* Array api_response_codes in $GLOBAL array gezet zodat deze ook in functies aangesproken kan worden
 		* Functie toegevoegd aan functies.php 'getVariableFromPostVars'. Kan aangeroepen worden om na te kijken of verplichte values aanwezig zijn in $postvars. Zo niet geeft het een fout code terug. Dit wordt gedaan om repetitieve code voor iedere verplichte variabel te verminderen.
+		* Toevoegen van specifiekere Messages voor api_response_codes
