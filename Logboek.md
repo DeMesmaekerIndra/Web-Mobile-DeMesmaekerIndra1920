@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 52u 30m
+## Totaal aantal uren: 56u 30m
 
 ## Week 1:
 * 4u les.
@@ -118,3 +118,10 @@
 		* Array api_response_codes in $GLOBAL array gezet zodat deze ook in functies aangesproken kan worden
 		* Functie toegevoegd aan functies.php 'getVariableFromPostVars'. Kan aangeroepen worden om na te kijken of verplichte values aanwezig zijn in $postvars. Zo niet geeft het een fout code terug. Dit wordt gedaan om repetitieve code voor iedere verplichte variabel te verminderen.
 		* Toevoegen van specifiekere Messages voor api_response_codes
+
+* 24/11/19 : 4u
+	* Werken aan hybride app
+		* installatie van ionic framework
+		* testapplicatie
+		* werkende navigatie, nieuwe icons
+		* proberen gebruik te maken van cards
