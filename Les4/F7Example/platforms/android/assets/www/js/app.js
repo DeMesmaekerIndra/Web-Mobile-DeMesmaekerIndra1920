@@ -65,15 +65,31 @@ let app = new Framework7({
                     voegToe();
                 });
             }
-
         }
     },
 });
-document.addEventListener('deviceready', onDeviceReady, false);
 
-function onDeviceReady() {
-    alert(navigator.camera);
-}
+document.getElementById('btnBarcode').addEventListener('click', function () {
+    cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, 'https://webandmobile1920.000webhostapp.com/', function (success) {
+        alert('encode success: ' + success);
+    }, function (fail) {
+        alert('encoding failed: ' + fail);
+    });
+});
+
+document.getElementById('btnBarcodeLezen').addEventListener('click', function () {
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            alert('We got a barcode\n' +
+                'Result: ' + result.text + '\n' +
+                'Format: ' + result.format + '\n' +
+                'Cancelled: ' + result.cancelled);
+        },
+        function (error) {
+            alert('Scanning failed: ' + error);
+        }
+    );
+});
 
 document.getElementById('btnImage').addEventListener('click', function () {
     navigator.camera.getPicture(cameraSuccess, cameraError, setOptions(Camera.PictureSourceType.CAMERA));
