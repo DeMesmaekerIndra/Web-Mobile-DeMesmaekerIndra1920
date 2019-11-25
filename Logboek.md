@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 60u 30m
+## Totaal aantal uren: 63u 30m
 
 ## Week 1:
 * 4u les.
@@ -129,3 +129,9 @@
 			* NOTE: app starte op vanuit localhost in plaats van 'file://...' Andere versie van ionic webview plugin moeten installeren.
 		* data binding ng-repeat voor tasks.
 		* Kleine aanpassingen API
+		
+* 25/11/19 : 3u
+	* Werken aan hybride app
+		* leren werken met modals in ionic
+		* login modal maken
+		* functionaliteit toevoegen aan de modal (nakijken of gebruiker bestaat, sluiten van bij cancelling)
