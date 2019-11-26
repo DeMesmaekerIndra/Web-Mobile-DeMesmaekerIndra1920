@@ -129,7 +129,8 @@
 			* NOTE: app starte op vanuit localhost in plaats van 'file://...' Andere versie van ionic webview plugin moeten installeren.
 		* data binding ng-repeat voor tasks.
 		* Kleine aanpassingen API
-		
+
+## Week 9:
 * 25/11/19 : 3u
 	* Werken aan hybride app
 		* leren werken met modals in ionic
