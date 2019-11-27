@@ -125,19 +125,19 @@
 		* testapplicatie
 		* werkende navigatie, nieuwe icons
 		* proberen gebruik te maken van cards
-		* aanspreken van API 
+		* aanspreken van API
 			* NOTE: app starte op vanuit localhost in plaats van 'file://...' Andere versie van ionic webview plugin moeten installeren.
 		* data binding ng-repeat voor tasks.
 		* Kleine aanpassingen API
-		
+
+## Week 9:
 * 25/11/19 : 3u
 	* Werken aan hybride app
 		* leren werken met modals in ionic
 		* login modal maken
 		* functionaliteit toevoegen aan de modal (nakijken of gebruiker bestaat, sluiten van bij cancelling)
 
-# Week 9:
-*	5u les
-		* Aanpassen van Databank
-		* Categories & tasks binnenladen
-		* implementeren van het doorklikken op categories & sub categories om zo bij taken te komen
+* 5u les
+	* Aanpassen van Databank
+	* Categories & tasks binnenladen
+	* implementeren van het doorklikken op categories & sub categories om zo bij taken te komen
