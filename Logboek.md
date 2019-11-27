@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 63u 30m
+## Totaal aantal uren: 68u 30m
 
 ## Week 1:
 * 4u les.
@@ -135,3 +135,9 @@
 		* leren werken met modals in ionic
 		* login modal maken
 		* functionaliteit toevoegen aan de modal (nakijken of gebruiker bestaat, sluiten van bij cancelling)
+
+# Week 9:
+*	5u les
+		* Aanpassen van Databank
+		* Categories & tasks binnenladen
+		* implementeren van het doorklikken op categories & sub categories om zo bij taken te komen
