@@ -142,7 +142,10 @@
 	* Categories & tasks binnenladen
 	* implementeren van het doorklikken op categories & sub categories om zo bij taken te komen
 
-* 27/11/19 : 3u
+* 27/11/19 : 5u
 	* Layout/design aantrekkelijker gemaakt voor de tasks tabel
 	* Opzoeken van de ondersteunde ionic HTML elementen voor ionic v1.
 	* Niet ondersteunde elementen, tags & CSS aangepast aan de correcte manier van werken
+	* Overhaul van de interne werking
+		* Gebruik maken van de factory die angularJS aanbied om van gecachte data gemakkelijk bepaalde gegevens op te halen
+		* Werken met es version 8, async functions & wait
