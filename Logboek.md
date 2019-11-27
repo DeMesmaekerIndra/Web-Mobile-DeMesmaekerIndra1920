@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 68u 30m
+## Totaal aantal uren: 71u 30m
 
 ## Week 1:
 * 4u les.
@@ -126,7 +126,7 @@
 		* werkende navigatie, nieuwe icons
 		* proberen gebruik te maken van cards
 		* aanspreken van API
-			* NOTE: app starte op vanuit localhost in plaats van 'file://...' Andere versie van ionic webview plugin moeten installeren.
+			* NOTE: app starte op vanuit 'localhost' in plaats van 'file://...' Andere versie van ionic webview plugin moeten installeren.
 		* data binding ng-repeat voor tasks.
 		* Kleine aanpassingen API
 
@@ -141,3 +141,8 @@
 	* Aanpassen van Databank
 	* Categories & tasks binnenladen
 	* implementeren van het doorklikken op categories & sub categories om zo bij taken te komen
+
+* 27/11/19 : 3u
+	* Layout/design aantrekkelijker gemaakt voor de tasks tabel
+	* Opzoeken van de ondersteunde ionic HTML elementen voor ionic v1.
+	* Niet ondersteunde elementen, tags & CSS aangepast aan de correcte manier van werken
