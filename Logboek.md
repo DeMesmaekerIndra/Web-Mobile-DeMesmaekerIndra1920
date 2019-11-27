@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 71u 30m
+## Totaal aantal uren: 73u 30m
 
 ## Week 1:
 * 4u les.
