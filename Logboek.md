@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 73u 30m
+## Totaal aantal uren: 77u 30m
 
 ## Week 1:
 * 4u les.
@@ -149,3 +149,7 @@
 	* Overhaul van de interne werking
 		* Gebruik maken van de factory die angularJS aanbied om van gecachte data gemakkelijk bepaalde gegevens op te halen
 		* Werken met es version 8, async functions & wait
+
+## Week 10:
+* 4u les
+	* API aanpassen voor inserts & updates
