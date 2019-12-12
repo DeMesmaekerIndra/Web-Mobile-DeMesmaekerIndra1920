@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 77u 30m
+## Totaal aantal uren: 81u 30m
 
 ## Week 1:
 * 4u les.
@@ -153,3 +153,9 @@
 ## Week 10:
 * 4u les
 	* API aanpassen voor inserts & updates
+	
+## Week 11:
+* 4u les 
+	* login serverside doen gebeuren
+	* basic API documentatie schrijven voor groep
+	* aanpassen van taken mogelijk maken
