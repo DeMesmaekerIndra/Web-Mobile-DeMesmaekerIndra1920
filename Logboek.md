@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 81u 30m
+## Totaal aantal uren: 88u 30m
 
 ## Week 1:
 * 4u les.
@@ -159,3 +159,15 @@
 	* login serverside doen gebeuren
 	* basic API documentatie schrijven voor groep
 	* aanpassen van taken mogelijk maken
+
+* 15/12/19 : 3u 
+	* API bugfixes
+	* Interne werking veranderen
+		* Factories & controllers aanpassen
+	
+* 16/12/19 : 4u
+	* Home screen functionaliteit geven (recente taken tonen)
+		* HTML opmaak geven voor recente taken
+		* State aanmaken voor het tonen van detail informatie (hergebruik van taskDescription.html template & taskDescription Controller)
+		* recente taken vanuit home screen kunnen editeren via modal (hergebruik modalTaskEdit.html template)
+		* TaskFactory met functie uitbreiden die recente, on-going tasks weer te geven
