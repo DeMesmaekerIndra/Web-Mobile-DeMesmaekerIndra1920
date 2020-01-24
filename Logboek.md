@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 91u 30m
+## Totaal aantal uren: 93u
 
 ## Week 1:
 * 4u les.
@@ -173,9 +173,15 @@
 		* TaskFactory met functie uitbreiden die recente, on-going tasks weer te geven
 
 ## Week voor examen:
-* 24/01/20 : 3u
+* 24/01/20 : 4u 30m
 	* Homescreen & login modal
 		* Ng-if statement van divs weggehaald en op H1's gezet. (Originele manier was niet echt logisch...)
 		* Inplaats van een aparte list voor assessments te gebruiken en dan een ng-if om de ID te checken tegen de task id gaat er nu per task gewoon de laatste assessment toegevoegd worden
 		* Login modal gaat gebruik maken van de Ng-class attribuut om via condities de login button disabled/enabled te zetten. Origineel ging dit door in de controller events te gebruiken en vanuit code de classlist aan te passen. (Dit ging tegen de MVVM manier van werken)
 		* Er is nu een modalFactory gemaakt in services.js om repetitieve code om het aanmaken, sluiten en openen van modals op 1 enkele plaats onder te brengen
+	* modals
+		* alle andere instanties waar een modal wordt aangemaakt met de nieuwe modalfactory vervangen
+		* algemene closeModal() function aan de modalFactory toegoevoegd. Nu hoeft deze niet per modal aangemaakt te woren. Een switch op de templateUrl zal extra dingen bij het sluiten uitvoeren indien nodig.
+		* algemene openModal() function aan de modalFactory toegevoegd. Nu hoeft deze niet per controller aangemaakt te woren.
+	* Assessment tabel
+		* Basis functionaliteit voor de assessments tab: Het tonen van alle assessments
