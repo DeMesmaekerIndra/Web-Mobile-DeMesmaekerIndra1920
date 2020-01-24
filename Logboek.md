@@ -183,5 +183,5 @@
 		* alle andere instanties waar een modal wordt aangemaakt met de nieuwe modalfactory vervangen
 		* algemene closeModal() function aan de modalFactory toegoevoegd. Nu hoeft deze niet per modal aangemaakt te woren. Een switch op de templateUrl zal extra dingen bij het sluiten uitvoeren indien nodig.
 		* algemene openModal() function aan de modalFactory toegevoegd. Nu hoeft deze niet per controller aangemaakt te woren.
-	* Assessment tabel
+	* Assessment tab
 		* Basis functionaliteit voor de assessments tab: Het tonen van alle assessments
