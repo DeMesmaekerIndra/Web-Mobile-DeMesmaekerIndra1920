@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 95u 30m
+## Totaal aantal uren: 96u 30m
 
 ## Week 1:
 * 4u les.
@@ -186,7 +186,7 @@
 	* Assessment tab
 		* Basis functionaliteit voor de assessments tab: Het tonen van alle assessments
 
-* 25/11/20 : 2u 30m
+* 25/11/20 : 3u 30m
 	* Controllers
 		* Niet elke showData() function in iedere controller voerde $scope.$apply() uit. Hierdoor werden mogelijke nieuwe gegegevens niet getoond bij het herladen van een tab of na het editeren van een taak.
 		* Refactoring van de manier waarop tasks aangepast worden
@@ -197,3 +197,5 @@
 		* taskfactory updateTask() is nu verantwoordelijk voor de conversion van date formats (JS date object -> yyyy-mm-dd string) voor het verzenden van data
 	* tabs
 		* taskDescription.html heeft gaat het description veld nu text wrappen zodat de hele description getoond wordt
+		* Scores van assessments kunnen nu aangepast worden om een score te geven
+			* select input met ng-options om ze op basis van de scoring methode (numeric/descriptive) een score te geven
