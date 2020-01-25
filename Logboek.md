@@ -189,8 +189,8 @@
 * 25/11/20 : 2u
 	* Controllers
 		* Niet elke showData() function in iedere controller voerde $scope.$apply() uit. Hierdoor werden mogelijke nieuwe gegegevens niet getoond bij het herladen van een tab of na het editeren van een taak.
-		* Remade the way tasks are updated
-			* ng-class wordt gebruikt om de save changes button te disabled/enabled indien er verandering aan de waardes gebeurt zijn
+		* Refactoring van de manier waarop tasks aangepast worden
+			* ng-class wordt gebruikt om de save changes button te disabelen/enabelen indien er verandering aan de waardes gebeurt zijn
 			* I.p.v. een 3de object updateValues te gebruiken om enkel aangepaste waardes te sturen, wordt nu het newValues object gewoon volledig doorgestuurd.
 			* Veel rondgespeeld met de omzetting van dateformats. dates worden als een yyyy-mm-dd formatted string in de DB opgeslagen, maar angularJS verwacht volledige Date objects om met inputs te binden. Er is dus omzetting bij het ontvangen van data naar een object. En bij doorsturen van object naar string.
 	* tabs
