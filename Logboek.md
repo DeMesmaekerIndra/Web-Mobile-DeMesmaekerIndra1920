@@ -1,5 +1,5 @@
 # Logboek
-## Totaal aantal uren: 99u 30m
+## Totaal aantal uren: 100u
 
 ## Week 1:
 * 4u les.
@@ -206,8 +206,14 @@
 		* Foute tabel bij prepare statement van 'updateAssessments'
 		* Wanneer een score wordt voor een assessment wordt gezet zal de assessment status (Indien deze niet expliciet in de body is meegestuurd) op 'Done zetten'
 	
-* 26/01/20 : 2u	
+* 26/01/20 : 3u 30m
 	* Controllers
-		Assessmentscontroller heeft nu enkele functies in verband met filtering
+		* Assessmentscontroller heeft nu enkele functies in verband met filtering
+		* Custom hardware backbutton behavious. 
+			* Homescreen/loginmodals = exit app.
+			* Andere views gaan naar de vorige view
 	* tabs
-		Assessments tab heeft nu de mogelijkheid om te filteren op basis van taaknaam, of op status ('Missed', 'Done')
+		* Assessments tab heeft nu de mogelijkheid om te filteren op basis van taaknaam, of op status ('Missed', 'Done')
+		* Niewe tab om niewe gebruikers toe te voegen
+	* scripts
+		* check of naam bestaat voor nieuwe gebruiker. Stuur error in geval van.
