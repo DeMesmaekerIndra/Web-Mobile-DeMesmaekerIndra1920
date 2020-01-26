@@ -186,7 +186,7 @@
 	* Assessment tab
 		* Basis functionaliteit voor de assessments tab: Het tonen van alle assessments
 
-* 25/11/20 : 4u 30m
+* 25/01/20 : 4u 30m
 	* Controllers
 		* Niet elke showData() function in iedere controller voerde $scope.$apply() uit. Hierdoor werden mogelijke nieuwe gegegevens niet getoond bij het herladen van een tab of na het editeren van een taak.
 		* Refactoring van de manier waarop tasks aangepast worden
@@ -205,3 +205,9 @@
 	* Scripts
 		* Foute tabel bij prepare statement van 'updateAssessments'
 		* Wanneer een score wordt voor een assessment wordt gezet zal de assessment status (Indien deze niet expliciet in de body is meegestuurd) op 'Done zetten'
+	
+* 26/01/20 : 2u	
+	* Controllers
+		Assessmentscontroller heeft nu enkele functies in verband met filtering
+	* tabs
+		Assessments tab heeft nu de mogelijkheid om te filteren op basis van taaknaam, of op status ('Missed', 'Done')
